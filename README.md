@@ -1,4 +1,4 @@
-# 🛡️ DETONATE — Autonomous Zero-Blast-Radius SOC Sandbox on Vultr
+# 🛡️ DETONATE — Autonomous SOC Sandbox 
 
 **Built for the Vultr: Agent Rush Hackathon (Challenge 1: Blast Radius Zero)**
 
