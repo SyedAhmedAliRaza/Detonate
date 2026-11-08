@@ -1,0 +1,77 @@
+
+> detonate-web@0.1.0 start
+> next start -H 0.0.0.0 -p 3000
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 469ms
+/bin/sh: 1: docker: not found
+Error: Failed to find Server Action "x". This request might be from an older or newer deployment. 
+    at r$ (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:17:1667)
+    at rE (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6522)
+    at no (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:19:1150)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:726
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:17831)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:616
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16935)
+    at ni (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:543)
+Error: Failed to find Server Action "x". This request might be from an older or newer deployment. 
+    at r$ (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:17:1667)
+    at rE (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6522)
+    at no (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:19:1150)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:726
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:17831)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:616
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16935)
+    at ni (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:543)
+Error: Failed to find Server Action "x". This request might be from an older or newer deployment. 
+    at r$ (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:17:1667)
+    at rE (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6522)
+    at no (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:19:1150)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:726
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:17831)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:616
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16935)
+    at ni (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:543)
+Error: Failed to find Server Action "x". This request might be from an older or newer deployment. 
+    at r$ (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:17:1667)
+    at rE (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6522)
+    at no (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:19:1150)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:726
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:17831)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:616
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16935)
+    at ni (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:543)
+Error: Failed to find Server Action "x". This request might be from an older or newer deployment. 
+    at r$ (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:17:1667)
+    at rE (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6522)
+    at no (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:19:1150)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:726
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:17831)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:616
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16935)
+    at ni (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:543)
+Error: Failed to find Server Action "x". This request might be from an older or newer deployment. 
+    at r$ (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:17:1667)
+    at rE (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6522)
+    at no (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:19:1150)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:726
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:17831)
+    at /root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:616
+    at AsyncLocalStorage.run (node:async_hooks:346:14)
+    at Object.wrap (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16935)
+    at ni (/root/detonate/detonate-web/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:543)
