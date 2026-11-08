@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛡️ DETONATE — Autonomous Zero-Blast-Radius SOC Sandbox on Vultr
 
-## Getting Started
+**Built for the Vultr: Agent Rush Hackathon (Challenge 1: Blast Radius Zero)**
 
-First, run the development server:
+**Detonate** is an enterprise-grade autonomous security orchestration platform that safely detonates untrusted software artifacts—such as obfuscated Bash droppers, compromised `npm` package postinstall hooks, and poisoned CI/CD pipelines—inside ephemeral, high-security **gVisor (`runsc`)** user-space kernel sandboxes running on **Vultr Cloud Compute**, powered by **Vultr Serverless Inference**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🏗️ Architecture & Autonomous Agent Workflow
+
+```mermaid
+flowchart LR
+    A[SOC Analyst Portal] -->|1. Submit Threat Artifact| B(Vultr Cloud Compute VM Orchestrator)
+    B -->|2. Static Intent Triage| C[Vultr Serverless Inference API]
+    C -->|3. Synthesize Honey-Token Canaries| D[Ephemeral gVisor Container]
+    D -->|4. Pass 1 strace Syscall Audit| B
+    B -->|5. Conditional Evasion Caught?| D
+    D -->|6. Pass 2 De-Evasion & Purge| B
+    B -->|7. Synthesize YARA Rule & IOCs| C
+    C -->|8. Verifiable SOC Verdict| A
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### How Vultr Powers Detonate
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Vultr Cloud Compute (Central Control Plane):** Hosts the production Next.js application, Docker container daemon, and `gVisor` (`runsc`) user-space Sentry kernel runtime.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Vultr Serverless Inference (`https://api.vultrinference.com/v1`):** Drives the multi-step agentic reasoning pipeline:
+   - **Canary Arming:** Analyzes untrusted scripts and provisions realistic decoy honey-tokens (`/workspace/.env` and `~/.aws/credentials`) inside the execution workspace.
+   - **Adaptive De-Evasion:** Evaluates Pass 1 telemetry; if malware enters a dormant state upon detecting standard sandbox flags, the agent automatically injects runner environment telemetry and re-detonates.
+   - **Threat Synthesis:** Translates raw kernel syscall logs (`connect()`, `openat()`, `execve()`) into an executive SOC report and an exportable YARA detection rule.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔒 Four-Pillar Containment Model (Blast Radius: ZERO)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Every detonation executes inside a strictly governed container enforcing four non-negotiable security guardrails:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **User-Space Kernel Virtualization:** Executed under `--runtime=runsc` (**gVisor**), intercepting syscalls so malicious payloads never interact directly with the host Linux kernel.
+- **Secret Hygiene & Network Isolation:** `--network none` physically blocks all outbound data exfiltration attempts while `strace` audits attempted C2 socket connections (`ENETUNREACH`).
+- **Resource Hardening:** Enforces strict execution limits (`--memory 128m`, `--cpus 0.5`, `--pids-limit 32`, and an 8-second execution timeout) to neutralize fork bombs and resource exhaustion attacks.
+- **Lifecycle Discipline:** Backed by `--rm` and ephemeral volume teardown (`shutil.rmtree`), ensuring zero state or malicious remnants persist after execution.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Quick Start & Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/SyedAhmedAliRaza/Detonate.git
+cd Detonate/detonate-web
+```
+
+### 2. Build the Sandbox Docker Image
+
+```bash
+docker build -t detonate-sandbox:latest -f Dockerfile.sandbox .
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Build the Application
+
+```bash
+npm run build
+```
+
+### 5. Start the Application
+
+```bash
+npm run start
+```
