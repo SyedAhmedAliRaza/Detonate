@@ -2,7 +2,7 @@
 
 **Built for the Vultr: Agent Rush Hackathon (Challenge 1: Blast Radius Zero)**
 
-**Detonate** is an enterprise-grade autonomous security orchestration platform that safely detonates untrusted software artifacts—such as obfuscated Bash droppers, compromised `npm` package postinstall hooks, and poisoned CI/CD pipelines—inside ephemeral, high-security **gVisor (`runsc`)** user-space kernel sandboxes running on **Vultr Cloud Compute**, powered by **Vultr Serverless Inference**.
+**Detonate** is an enterprise-grade autonomous security orchestration platform that safely detonates untrusted software artifacts such as obfuscated Bash droppers, compromised `npm` package postinstall hooks, and poisoned CI/CD pipelines—inside ephemeral, high-security **gVisor (`runsc`)** user-space kernel sandboxes running on **Vultr Cloud Compute**, powered by **Vultr Serverless Inference**.
 
 ---
 
